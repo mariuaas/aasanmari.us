@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../components/BaseLayout.astro";
+import BlogIndexContent from "../components/BlogIndexContent.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+	.filter((p) => !p.data.draft)
+	.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+---
+
+<BaseLayout title="aasanmari.us" description="Writing">
+	<BlogIndexContent
+		intro="I'm Marius Aasan, a machine learning researcher working mainly with computer vision and theoretical machine learning. Here you'll find my blog posts, projects, and more about my interests in technology, programming, some mathematics, and sometimes even silly art and music I enjoy."
+		posts={posts}
+	/>
+</BaseLayout>

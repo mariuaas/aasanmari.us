@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+	intro?: string;
+	posts: CollectionEntry<"blog">[];
+};
+
+const { intro, posts } = Astro.props;
+---
+
+{intro ? <p class="mt-2 theme-muted">{intro}</p> : null}
+
+<div class="mt-8 space-y-6">
+	{posts.length === 0 ? (
+		<p class="theme-muted">No posts yet.</p>
+	) : (
+		posts.map((post) => (
+			<article>
+				<h2 class="text-xl font-semibold">
+					<a class="hover:underline" href={`/blog/${post.slug}/`}>{post.data.title}</a>
+				</h2>
+				<div class="mt-1 text-sm theme-muted-2">
+					<time datetime={post.data.pubDate.toISOString()}>
+						{post.data.pubDate.toLocaleDateString(undefined, {
+							year: "numeric",
+							month: "short",
+							day: "2-digit",
+						})}
+					</time>
+				</div>
+				{post.data.description ? (
+					<p class="mt-2 theme-muted">{post.data.description}</p>
+				) : null}
+			</article>
+		))
+	)}
+</div>
