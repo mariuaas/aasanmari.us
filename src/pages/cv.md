@@ -6,7 +6,7 @@ description: Curriculum vitae for Marius Aasan, PhD Candidate in Machine Learnin
 
 # Curriculum Vitae
 
-I'm an enthusiastic fellow who loves learning, teaching, and doing research in mathematical modelling and computer science.
+I'm an enthusiastic fellow who loves learning, teaching, and doing research in mathematical modelling and computer science. My education and research 
 
 ## Contact
 
@@ -15,36 +15,39 @@ I'm an enthusiastic fellow who loves learning, teaching, and doing research in m
 
 ## Positions
 
-- **PhD Candidate**, University of Oslo (2022–Present)  
-  Digital Signal Processing and Image Analysis Group. Researching adaptive visual tokenization and geometric/topological modeling for modern vision models. Funded by SFI Visual Intelligence.
+- **Postdoc**, UiO / SFI Visual Intelligence (2026–Present)  
+  Worked on subsurface imaging and AI for geophysical modelling at the DSB Group.
 
-- **Manager**, Dekk1 Åssiden / Drammen (2012–2014)  
-  Department head responsible for daily operations, personnel, and budgeting. Achieved significant revenue and margin growth.
+- **Manager**, Dekk1 (2012–2014)  
+  Department head at Åssiden, Drammen, responsible for daily operations, personnel, and budgeting. Achieved significant revenue and margin growth.
 
 - **Project Manager**, Hard Hit Productions, Manchester UK (2008–2012)  
   Music production, promotion, and international touring.
 
 ## Education
 
-- **MSc in Data Science**, University of Oslo (2019–2021)  
+- **PhD, Digital Signal Processing and Image Analysis**, UiO / SFI Visual Intelligence (2022–2026)  
+  Researching adaptive visual tokenization and geometric/topological modeling for modern vision models, funded by SFI Visual Intelligence.
+
+- **MSc, Data Science**, UiO (2019–2021)  
   Grade: A. Emphasis on mathematical modeling and machine learning.
 
-- **BSc in Computer Science and Mathematics**, University of Oslo (2015–2019)
+- **BSc, Mathematics and Computer Science**, UiO (2015–2019)
 
 ## Publications
 
 My research focuses on differentiable tokenization, superpixels, and graph-based vision.  
-**See [papers](/papers) for the full list including NeurIPS, ICCV, and ECCV works.**
+**See [papers](/papers) for the full list including NeurIPS, ICLR, ECCV/ICCV works.**
 
 ## Teaching
 
-- **MSc Supervision**, University of Oslo (2023–2025)  
+- **MSc Supervision**, UiO (2023–2025)  
   Main supervisor for projects on superpixel graph neural networks and learnable watershed transforms.
-- **IN3310: Deep Learning for Image Analysis**, University of Oslo (2023–2025)  
+- **IN3310: Deep Learning for Image Analysis**, UiO (2023–2025)  
   Lecturer and exam designer.
-- **IN5310: Advanced Deep Learning for Image Analysis**, University of Oslo (2023–2024)  
+- **IN5310: Advanced Deep Learning for Image Analysis**, UiO (2023–2024)  
   Co-designed syllabus, guest lecturer, and lab lead.
-- **IN2070: Digital Image Processing**, University of Oslo (2023)  
+- **IN2070: Digital Image Processing**, UiO (2023)  
   Redesigned curriculum focusing on information theory, morphology, and compression.
 
 ## Technical Skills

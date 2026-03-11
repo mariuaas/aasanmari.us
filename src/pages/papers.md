@@ -36,4 +36,4 @@ While this page is regulerly updated, a complete list of recent papers, includin
     - [PDF](#) · [DOI](#) · [BIB](/bib/aasan_phdthesis.bib)
 - **Invertible and Pseudo-Invertible Encoders** 
     - *MSc, University of Oslo* (2021). 
-    - [PDF](https://www.duo.uio.no/bitstream/handle/10852/91228/Master___Marius_Final.pdf) · [URN](urn.nb.no/URN:NBN:no-93858) · [BIB](/bib/aasan_mscthesis.bib)
+    - [PDF](https://www.duo.uio.no/bitstream/handle/10852/91228/Master___Marius_Final.pdf) · [URN](https://urn.nb.no/URN:NBN:no-93858) · [BIB](/bib/aasan_mscthesis.bib)

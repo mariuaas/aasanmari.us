@@ -46,7 +46,7 @@ const { title, description } = Astro.props;
         />
 
     </head>
-    <body class="min-h-screen bg text-(--fg)">
+    <body class="flex flex-col min-h-screen bg text-(--fg)">
         <header class="border-b theme-border">
             <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
                 <a href="/" class="font-heading text-lg font-normal tracking-wide theme-fg">aasanmari.us</a>
@@ -68,7 +68,7 @@ const { title, description } = Astro.props;
         </header>
 
         <!-- Sidebar + content -->
-        <div class="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-6 py-4 md:grid-cols-[9rem_1fr]">
+        <div class="flex-1 w-full mx-auto grid max-w-5xl grid-cols-1 gap-10 px-6 py-4 md:grid-cols-[9rem_1fr]">
             <aside class="md:sticky md:top-6 h-fit rounded-xl border theme-border theme-panel p-4">
                 <div class="flex justify-center gap-3">
                     <p><a href="/">
@@ -137,7 +137,7 @@ const { title, description } = Astro.props;
             </main>
         </div>
 
-        <footer class="border-t theme-border">
+        <footer class="">
             <div class="mx-auto max-w-5xl px-6 py-6 text-xs theme-muted-2">
                 © {new Date().getFullYear()} Marius Aasan
             </div>

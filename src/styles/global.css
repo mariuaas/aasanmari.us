@@ -17,6 +17,7 @@
     --panel-hover: rgba(255, 255, 255, 0.10);
     --link: rgba(255, 255, 255, 0.92);
     --link-hover: rgba(255, 255, 255, 1);
+    --chrome: rgba(255, 255, 255, 0.01);
 
     /* Background theme tokens */
     --bg0: #0b0c10;
@@ -24,7 +25,7 @@
     --bg2: #2a2d36;
     --bg-grid: rgba(255, 255, 255, 0.12);
     --bg-grid-size: 40px;
-    --bg-glow-1: rgba(255, 255, 255, 0.02);
+    --bg-glow-1: rgba(255, 255, 255, 0.05);
     --bg-glow-2: rgba(255, 255, 255, 0.08);
   }
 
@@ -38,12 +39,13 @@
     --panel-hover: rgba(15, 23, 42, 0.07);
     --link: rgba(15, 23, 42, 0.92);
     --link-hover: rgba(15, 23, 42, 1);
+    --chrome: rgba(15, 23, 42, 0.01);
 
     --bg0: #f8fafc;
     --bg1: #eef2f7;
     --bg2: #e2e8f0;
     --bg-grid: rgba(15, 23, 42, 0.12);
-    --bg-glow-1: rgba(15, 23, 42, 0.08);
+    --bg-glow-1: rgba(15, 23, 42, 0.20);
     --bg-glow-2: rgba(15, 23, 42, 0.12);
   }
 
@@ -100,19 +102,48 @@
   .theme-hover-fg:hover { color: var(--fg); }
   .theme-hover-panel:hover { background-color: var(--panel-hover); }
 
+  .site-chrome {
+    position: relative;
+    z-index: 10;
+    opacity: 0.5;
+
+    background-color: var(--chrome);
+    border-color: var(--border);
+
+    /* Optional, helps separate from busy backgrounds */
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+
   .bg {
-    min-height: 100vh;
-    background:
-      radial-gradient(1600px 1200px at 85% 85%, var(--bg-glow-1), transparent 25%),
-      radial-gradient(1600px 1200px at 85% 85%, var(--bg-glow-2), transparent 65%),
-      linear-gradient(135deg, var(--bg0), var(--bg1) 55%, rgba(0, 0, 0, 0) 100%),
-      repeating-linear-gradient(60deg, transparent 0 calc(var(--bg-grid-size) - 1px), var(--bg-grid) calc(var(--bg-grid-size) - 1px) var(--bg-grid-size)),
-      repeating-linear-gradient(-60deg, transparent 0 calc(var(--bg-grid-size) - 1px), var(--bg-grid) calc(var(--bg-grid-size) - 1px) var(--bg-grid-size)),
-      repeating-linear-gradient(0deg, transparent 0 calc(var(--bg-grid-size) - 1px), var(--bg-grid) calc(var(--bg-grid-size) - 1px) var(--bg-grid-size));
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    z-index: 0;
+    
     background-color: var(--bg0);
-    background-attachment: fixed;
+    background-repeat: repeat;
+    background-attachment: fixed; /* Enable for scrolling effect */
+    background-size: 180px 312px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180.0\' height=\'312.0\' viewBox=\'0 0 180.0 312.0\'%3E%3Cpolygon points=\'45.0,130.0 0.0,156.0 90.0,156.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'0.0,156.0 0.0,208.0 45.0,234.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,234.0 90.0,208.0 90.0,156.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,234.0 90.0,156.0 0.0,156.0\' fill=\'%23454266\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,130.0 90.0,156.0 180.0,156.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'90.0,156.0 90.0,208.0 135.0,234.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,234.0 180.0,208.0 180.0,156.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,234.0 180.0,156.0 90.0,156.0\' fill=\'%23454266\' stroke=\'none\'/%3E%3Cpolygon points=\'90.0,208.0 45.0,234.0 135.0,234.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,234.0 45.0,286.0 90.0,312.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,234.0 135.0,286.0 90.0,312.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,234.0 45.0,234.0 90.0,312.0\' fill=\'%23454266\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,130.0 90.0,104.0 135.0,130.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,130.0 90.0,156.0 135.0,130.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'0.0,208.0 0.0,260.0 45.0,286.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'0.0,208.0 45.0,234.0 45.0,286.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,286.0 180.0,260.0 180.0,208.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,286.0 135.0,234.0 180.0,208.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,130.0 90.0,104.0 90.0,52.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,130.0 45.0,78.0 90.0,52.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,78.0 45.0,130.0 0.0,156.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,78.0 0.0,78.0 0.0,156.0\' fill=\'%23454266\' stroke=\'none\'/%3E%3Cpolygon points=\'90.0,52.0 90.0,104.0 135.0,130.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'90.0,52.0 135.0,78.0 135.0,130.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,78.0 135.0,130.0 180.0,156.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'180.0,78.0 135.0,78.0 180.0,156.0\' fill=\'%23454266\' stroke=\'none\'/%3E%3Cpolygon points=\'0.0,52.0 0.0,78.0 45.0,78.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'0.0,0.0 0.0,52.0 45.0,78.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'90.0,0.0 0.0,0.0 45.0,78.0\' fill=\'%23454266\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,78.0 90.0,52.0 90.0,0.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'180.0,52.0 135.0,78.0 180.0,78.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,78.0 180.0,52.0 180.0,0.0\' fill=\'%230A2A33\' stroke=\'none\'/%3E%3Cpolygon points=\'180.0,0.0 90.0,0.0 135.0,78.0\' fill=\'%23454266\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,78.0 90.0,52.0 90.0,0.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,286.0 0.0,312.0 90.0,312.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'45.0,286.0 0.0,312.0 0.0,286.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'0.0,260.0 0.0,286.0 45.0,286.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,286.0 90.0,312.0 180.0,312.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3Cpolygon points=\'135.0,286.0 180.0,286.0 180.0,312.0\' fill=\'%23213C52\' stroke=\'none\'/%3E%3Cpolygon points=\'180.0,260.0 135.0,286.0 180.0,286.0\' fill=\'%23354261\' stroke=\'none\'/%3E%3C/svg%3E");
+  }
+
+.bg::before {
+    content: "";
+    position: fixed;
+    inset: 0; 
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+      radial-gradient(2400px 1600px at 0% 100%, var(--bg-glow-1), transparent 25%),
+      radial-gradient(1600px 1600px at 85% 85%, var(--bg-glow-2), transparent 95%),
+      linear-gradient(150deg, var(--bg0), var(--bg1) 60%, rgba(0, 0, 0, 0) 195%);
+
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.95;
+    mix-blend-mode: soft-light;
   }
 
   .prose {
@@ -139,10 +170,20 @@
     line-height: 1.25;
   }
 
-  .prose :where(ul, ol):not(:where(.not-prose, .not-prose *)) {
+  .prose :where(ul):not(:where(.not-prose, .not-prose *)) {
     margin: 1em 0;
     padding-left: 1.25em;
+    list-style-type: disc;
+    list-style-position: outside;
   }
+
+  .prose :where(ol):not(:where(.not-prose, .not-prose *)) {
+    margin: 1em 0;
+    padding-left: 1.25em;
+    list-style-type: decimal;
+    list-style-position: outside;
+  }
+
 
   .prose :where(li):not(:where(.not-prose, .not-prose *)) {
     margin: 0.35em 0;

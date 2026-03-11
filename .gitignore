@@ -12,9 +12,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# VSCode
-.vscode/
-
 # environment variables
 .env
 .env.production
@@ -27,3 +24,6 @@ pnpm-debug.log*
 
 # VS Code workspace settings
 .vscode/
+
+# Trash
+.trash/
