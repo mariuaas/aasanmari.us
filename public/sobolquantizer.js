@@ -1,7 +1,7 @@
 const SVG_NS = 'http://www.w3.org/2000/svg';
 const MAX_LUMA_BITS = 8;
 const MAX_CHROMA_BITS = 8;
-const SOBOL_SEED = 3385;
+const SOBOL_SEED = 90210;
 
 // ── Sobol engine (2D, Owen-scrambled) ───────────────────────────
 
